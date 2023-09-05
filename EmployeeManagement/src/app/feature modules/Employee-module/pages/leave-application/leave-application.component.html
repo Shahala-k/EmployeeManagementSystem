@@ -1,0 +1,58 @@
+<div class="leave-application">
+  <!-- heading -->
+  <h4 class="text-success mt-5"> Are you tired ....? Apply for a Leave </h4>
+<!-- Template-driven form for leave application starts -->
+  <form #leaveForm="ngForm" (submit)=" leaveForm.form.valid &&  onSubmit()">
+    <!-- start-date input -->
+    <div class="form-group">
+      <label>Start Date:</label>
+      <input type="date" id="startDate" class="form-control" name="startDate" [(ngModel)]="startDate" required>
+      <!-- error message -->
+      <div *ngIf="leaveForm.submitted && leaveForm.controls['startDate'].invalid" class="text-danger">
+        StartDate is required.
+    </div>
+    </div>
+    <!-- end-date input -->
+    <div class="form-group">
+      <label>End Date:</label>
+      <input type="date" id="endDate" class="form-control" name="endDate" [(ngModel)]="endDate" required>
+       <!-- error message -->
+       <div *ngIf="leaveForm.submitted && leaveForm.controls['endDate'].invalid" class="text-danger">
+        EndDate is required.
+    </div>
+    </div>
+    <!-- leaveType dropdown -->
+    <div class="form-group">
+      <label>Leave Type:</label>
+      <select id="leaveType" class="form-control" name="leaveType" [(ngModel)]="leaveType" required>
+        <option value="">Select Leave Type</option>
+        <option value="Sick Leave">Sick Leave</option>
+        <option value="Annual Leave">Annual Leave</option>
+        <option value="Casual Leave">Casual Leave</option>
+      </select>
+      <!-- error message -->
+      <div *ngIf="leaveForm.submitted && leaveForm.controls['leaveType'].invalid" class="text-danger">
+        LeaveType is required.
+    </div>
+    </div>
+    <!-- reason textarea -->
+    <div class="form-group">
+      <label>Reason:</label>
+      <textarea id="reason" name="reason" placeholder="type reason here" class="form-control" [(ngModel)]="reason"
+        required></textarea>
+        <!-- error message -->
+        <div *ngIf="leaveForm.submitted && leaveForm.controls['reason'].invalid" class="text-danger">
+          Reason is required.
+      </div>
+    </div><br><br>
+    <div class="btns">
+      <button type="submit" class="btn btn-outline-success">Apply</button>
+    </div>
+  </form>
+  <!-- Template-driven form for leave application ended -->
+</div>
+<!-- Note message -->
+<div>
+  <p class="text-center text-warning mt-5">NB :- If you take leave morethan 5 days please inform your team leader for
+    leave approval.</p>
+</div>

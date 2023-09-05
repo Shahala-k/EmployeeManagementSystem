@@ -1,0 +1,26 @@
+<div class="container" id="container">
+  <!-- rightside text -->
+  <h1 class="head">Hey....,<br><span>Welcome !</span></h1>
+
+  <div class="form-container log-in-container">
+    <!-- Template-driven form for login -->
+    <form #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && onSubmit()">
+      <p>Login to Continue</p>
+      <!-- username input -->
+      <input type="text" id="name" class="form-control" placeholder="Username" name="username" [(ngModel)]="username" required>
+      <!-- required error message -->
+      <div *ngIf="loginForm.submitted && loginForm.controls['username'].invalid" class="text-danger">
+        Username is required.
+      </div>
+      <!-- password input -->
+      <input type="password" id="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password" required>
+      <!-- required error message -->
+      <div *ngIf="loginForm.submitted && loginForm.controls['password'].invalid" class="text-danger">
+        Password is required.
+      </div>
+      <a href="#" class="text-primary">Forgot your password?</a>
+      <!-- Login button -->
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>

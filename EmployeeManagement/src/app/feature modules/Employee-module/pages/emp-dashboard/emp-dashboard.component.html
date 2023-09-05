@@ -1,0 +1,37 @@
+<div class="emp-panel">
+<!-- Section for display logged employee name,image and position  starts-->
+    <div class="logo">
+        <img [src]="employeeUser?.image" alt="Employee Image" class="logo__img">
+        <span class="logo__text">{{employeeUser.name |titlecase}} | {{employeeUser.position |titlecase}} </span>
+    </div>
+<!-- Section for display logged employee name,image and position ended-->
+
+<!-- sidenavbar with contents starts -->
+    <div class="sidenav">
+        <ul>
+            <li><a routerLink="./details" routerLinkActive="active"><i class="bx bx-grid-alt"></i>
+                    <span>Dashboard</span></a></li>
+
+            <li><a routerLink="./profile-edit"><i class="bx bx-edit svg"></i>
+                    <span>Edit Profile</span></a></li>
+
+            <li><a routerLink="./leave"><i class="bx bx-calendar-minus svg"></i>
+                    <span>Leave Application</span></a></li>
+
+
+            <li><a routerLink="./empleaves"><i class="bx bx-calendar"></i>
+                    <span>Leave History</span></a></li>
+
+            <div class="logout">
+                <li><a (click)="logout()">
+                        <i class="bx bx-log-out"></i>
+                        <span>Logout</span></a></li>
+            </div>
+        </ul>
+    </div>
+</div>
+<div class="contents">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- sidenavbar with contents ended -->

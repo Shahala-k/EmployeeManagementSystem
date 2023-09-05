@@ -1,0 +1,41 @@
+<mat-card class="matcard">
+  <mat-card-header>
+    <!-- employee image on card -->
+    <div mat-card-avatar>
+      <img [src]="employee?.image" alt="Employee Image" class="matcard__img">
+    </div>
+    <div class="matcard__heading">
+      <!-- employee name and position -->
+      <mat-card-title>{{employee.name |titlecase | uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{employee.position |titlecase}}</mat-card-subtitle>
+    </div>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <div class="emp-details">
+<!-- Employee details heading -->
+      <h4 class="text-center mt-4 text-danger"><b>Employee Personal Details</b></h4>
+      <hr>
+      <!-- Employee all details -->
+
+      <p><span><b>ID:</b></span> {{employee.id}}</p>
+      <p><span><b>Name:</b></span> {{employee.name |titlecase}}</p>
+      <p><b>Age:</b> {{employee.age}}</p>
+      <p><b>Email Id :</b> {{employee.email}}</p>
+      <p><b>Date Of Birth :</b> {{employee.dob | date}}</p>
+      <p><b>Gender :</b> {{employee.gender |titlecase}}</p>
+      <p><b>Blood Group :</b> {{employee.Blood_group |titlecase}}</p>
+      <p><b>Mobile Number :</b> {{employee.phone}}</p>
+      <p><b>Status:</b> {{employee.status |titlecase}}</p>
+      <p><b>Total Leaves in a Month:</b> {{employee.leaves}}</p>
+      <p><b>Position :</b> {{employee.position |titlecase}}</p>
+      <p><b>Salary Package :</b> {{employee.package | currency:'INR'}}</p>
+      <p><b>Username :</b> {{employee.username}}</p>
+      <p><b>Password :</b> {{employee.password}}</p>
+    </div>
+    
+  </mat-card-content>
+  <mat-card-actions>
+  </mat-card-actions>
+</mat-card>

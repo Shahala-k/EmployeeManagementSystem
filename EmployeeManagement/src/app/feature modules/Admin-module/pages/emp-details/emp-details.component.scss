@@ -1,0 +1,44 @@
+.card {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+  
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+}
+
+.matcard {
+    &__img {
+        width: 45px;
+        height: 45px;
+        margin-left: 11px;
+        margin-top: 5px;
+        border-radius: 50%;
+    }
+    &__heading{
+        margin-left: 27px;
+    }
+}
+
+
+.emp-details {
+    width: 30rem;
+    text-align: center;
+    background: #6dc3cd;
+    font-size: 10px;
+}
+
+.text {
+    position: relative;
+    left: 5rem;
+}
+  

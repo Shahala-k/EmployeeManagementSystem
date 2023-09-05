@@ -1,0 +1,25 @@
+.form-control {
+    width: 29rem;
+}
+
+.btns {
+    margin-left: 9rem;
+}
+
+// Responsive for mobile
+
+@media(max-width:625px) {
+    .personal-details p {
+        width: 100rem;
+        font-size: 20px;
+    }
+}
+
+// Responsive for tablet
+
+@media (min-width: 769px) and (max-width: 1024px) {
+.personal-details p {
+    width: 100rem;
+    font-size: 20px;
+}
+}

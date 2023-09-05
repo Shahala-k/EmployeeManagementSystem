@@ -1,0 +1,31 @@
+<div class="admin-panel">
+<!-- admin panel logo and head -->
+    <div class="logo">
+        <img src="../../../../../assets/images/admin.jpeg" alt="logo" class="logo__img">
+        <span class="logo__text">ADMIN PANEL</span>
+    </div>
+<!-- side navbar for display contents -->
+    <div class="sidenav">
+        <ul>
+            <li><a routerLink="./dashboard" routerLinkActive="active"><i class="bx bx-grid-alt"></i>
+                    <span>Dashboard</span></a></li>
+
+            <li><a routerLink="./emp-list"><i class="bx bx-user"></i>
+                    <span>Employees</span></a></li>
+
+
+            <li><a routerLink="./emp-leave"><i class="bx bx-calendar"></i>
+                    <span>Leave Requests</span></a></li>
+
+            <div class="logout">
+                <li><a (click)="logout()">
+                <i class="bx bx-log-out"></i>
+                <span>Logout</span></a></li>
+            </div>
+        </ul>
+        </div>
+        </div>
+        <!-- router outlet for display each components in side-navbar -->
+        <div class="contents">
+            <router-outlet></router-outlet>
+        </div>

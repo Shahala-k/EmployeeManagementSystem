@@ -1,0 +1,169 @@
+<div class="container-fluid">
+
+    <!-- Template driven form for add a new employee starts -->
+    <form #employeeForm="ngForm" (ngSubmit)="employeeForm.form.valid && onSubmit(employeeForm.value)">
+        <h3 class="text-center mt-4 text-danger">Add New Employee Here...!</h3><br>
+        <div class="row g-3">
+            <!-- Employee Id Input -->
+            <div class="col-12 col-sm-6">
+                <input type="text" class="form-control" name="id" placeholder="Employee ID" aria-label="Employee ID"
+                    required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['id'].invalid" class="text-danger">
+                    Employee ID is required.
+                </div>
+            </div>
+            <!-- Employee name Input -->
+            <div class="col-12 col-sm-6">
+                <input type="text" class="form-control" name="name" placeholder="Name" aria-label="Name" required
+                    ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['name'].invalid" class="text-danger">
+                    Name is required.
+                </div>
+            </div>
+            <!-- Employee BloodGroup dropdown -->
+            <div class="col-12 col-sm-6">
+                <select class="form-select" name="Blood_group" aria-label="Blood Group" required ngModel>
+                    <option value="" disabled selected>Select Blood Group</option>
+                    <option value="A+ve">A+ve</option>
+                    <option value="A-ve">A-ve</option>
+                    <option value="B+ve">B+ve</option>
+                    <option value="B-ve">B-ve</option>
+                    <option value="AB+ve">AB+ve</option>
+                    <option value="AB-ve">AB-ve</option>
+                    <option value="O+ve">O+ve</option>
+                    <option value="O-ve">O-ve</option>
+                </select>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['Blood_group'].invalid" class="text-danger">
+                    Blood Group is required.
+                </div>
+            </div>
+            <!-- Employee image Input -->
+            <div class="col-12 col-sm-6">
+                <input type="file" class="form-control w-100" name="image" placeholder="Image" aria-label="image"
+                    [src]="getImageUrl()" accept="image/*" (change)="handleFileInput($event)" required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['image'].invalid" class="text-danger">
+                    Image is required.
+                </div>
+            </div>
+            <!-- Employee DOB Input -->
+            <div class="col-12 col-sm-6">
+                <input type="date" class="form-control w-100" name="dob" placeholder="Date of Birth" aria-label="dob"
+                    required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['dob'].invalid" class="text-danger">
+                    DOB is required.
+                </div>
+            </div>
+            <!-- Employee age Input -->
+            <div class="col-12 col-sm-6">
+                <input type="number" class="form-control" name="age" placeholder="Age" aria-label="Age" required
+                    ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['age'].invalid" class="text-danger">
+                    Age is required.
+                </div>
+            </div>
+            <!-- Employee gender radiobuttton -->
+            <div class="col-12 col-sm-6">
+                <label class="p-2">Gender:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="gender1" value="male" required
+                        ngModel>
+                    <div *ngIf="employeeForm.submitted && employeeForm.controls['gender'].invalid" class="text-danger">
+                        Gender is required.
+                    </div>
+                    <label class="form-check-label" for="gender1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="gender2" value="female" required
+                        ngModel>
+                    <label class="form-check-label" for="gender2">Female</label>
+                </div>
+            </div>
+            <!-- Employee status dropdown -->
+            <div class="col-12 col-sm-6">
+                <label class="p-2">Status:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" id="status1" value="active" required
+                        ngModel>
+                    <div *ngIf="employeeForm.submitted && employeeForm.controls['status'].invalid" class="text-danger">
+                        Status is required.
+                    </div>
+                    <label class="form-check-label" for="status1">Active</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" id="status2" value="inactive" required
+                        ngModel>
+                    <label class="form-check-label" for="status2">Inactive</label>
+                </div>
+            </div>
+            <!-- Employee position Input -->
+            <div class="col-12">
+                <input type="text" class="form-control" name="position" placeholder="Position" aria-label="Position"
+                    required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['position'].invalid" class="text-danger">
+                    Position is required.
+                </div>
+            </div>
+            <!-- Employee package Input -->
+            <div class="col-12">
+                <input type="text" class="form-control" name="package" placeholder="Package" aria-label="Package"
+                    required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['package'].invalid" class="text-danger">
+                    Package is required.
+                </div>
+            </div>
+            <!-- Employee username Input -->
+            <div class="col-12">
+                <input type="text" class="form-control" name="username" placeholder="Username" aria-label="username"
+                    required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['username'].invalid" class="text-danger">
+                    Usernameis required.
+                </div>
+            </div>
+            <!-- Employee leave count Input -->
+            <div class="col-12 col-sm-6">
+                <input type="number" class="form-control" name="leaves" placeholder="Leaves" aria-label="Leaves"
+                    maxlength="10" required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['leaves'].invalid" class="text-danger">
+                    Leaves count is required.
+                </div>
+            </div>
+            <!-- Employee email Input -->
+            <div class="col-12 col-sm-6">
+                <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" ngModel>
+
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['email'].invalid" class="text-danger">
+                    Email is required.
+                </div>
+            </div>
+            <!-- Employee password Input -->
+            <div class="col-12 col-sm-6">
+                <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password"
+                    required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['password'].invalid" class="text-danger">
+                    Password is required.
+                </div>
+            </div>
+            <!-- Employee phone number Input -->
+            <div class="col-12 col-sm-6">
+                <input type="text" class="form-control" name="phone" placeholder="Phone Number"
+                    aria-label="Phone Number" required ngModel>
+                <div *ngIf="employeeForm.submitted && employeeForm.controls['phone'].invalid" class="text-danger">
+                    Phone Number is required.
+                </div>
+            </div>
+            <!--  employee add button -->
+            <div class="col-12">
+                <button type="submit" class="form-control btn btn-outline-success">Add Employee</button><br>
+            </div>
+            <!-- form reset button -->
+            <div class="col-12">
+                <button type="reset" class="form-control btn btn-outline-info">Reset</button>
+            </div>
+        </div>
+    </form>
+        <!-- Template driven form for add a new employee ended -->
+    <br>
+    <!-- form back button -->
+    <button class="btn btn-warning" routerLink="../emp-list">Back</button>
+</div>

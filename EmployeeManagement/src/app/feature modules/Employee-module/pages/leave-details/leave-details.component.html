@@ -1,0 +1,33 @@
+<h4 class="text-secondary mt-5" > Recent Leave Applications :- </h4>
+<!-- Text  to display total leave count or "No records found" message -->
+<div *ngIf="appliedLeaves.length > 0" class="text-danger">
+  Total Leaves: {{ appliedLeaves.length }}
+</div>
+<div *ngIf="appliedLeaves.length === 0; else leaveTable" class="text-danger">
+  No records found.
+</div>
+<!-- table to display all applied leaves of logged employee -->
+<ng-template #leaveTable>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Reason</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- table items,all leave details of that employee -->
+      <tr *ngFor="let leave of appliedLeaves">
+        <td>{{ leave.leaveType }}</td>
+        <td>{{ leave.startDate | date }}</td>
+        <td>{{ leave.endDate | date }}</td>
+        <td>{{ leave.reason |titlecase}}</td>
+        <td>{{ leave.status |titlecase}}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>

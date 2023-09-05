@@ -1,0 +1,133 @@
+<div class="emptable">
+  <h4> Manage Employees Here...!</h4><br>
+  <!-- Button to add a new employee -->
+  <button class="btn btn-success" routerLink="../emp-add">Add New Employee</button><br><br>
+  <!-- Table to display all employees  starts-->
+  <table class="table table-success table-striped table-info">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>MobileNumber</th>
+        <th>Position</th>
+        <th>Package</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- bind datas of all employees from api using structure directive ngFor -->
+      <tr *ngFor="let employee of employees">
+        <td><img [src]="employee.image" alt="Employee Image" width="50" height="50"></td>
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name |titlecase | genderSalutation:employee.gender }}</td>
+        <td>{{ employee.age }}</td>
+        <td>{{ employee.gender | titlecase }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>{{ employee.position | titlecase}}</td>
+        <td>{{ employee.package | currency:'INR' }}</td>
+        <td>
+          <div class="btns">
+            <!-- button to display all details of each employee -->
+            <button class="btn btn-outline-info" (click)="viewEmp(employee.id)">View</button>
+            <!-- button to edit details of each employee  -->
+            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal"
+              (click)="openEditModal(employee)">Edit</button>
+              <!-- button to delete a employee from records  -->
+            <button class="btn btn-outline-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <!-- Table to display all employees ended -->
+
+
+<!-- A Modal for  Edit employee details  starts -->
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4  id="editModalLabel" class="text-danger">Edit Employee Details</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<!-- edit form with current employee datas -->
+        <form>
+          <!-- ID Input -->
+          <label>ID:</label>
+          <input type="text" [(ngModel)]="selectedEmployee.id" name="id" class="form-control">
+          <!-- name Input -->
+          <label>Name:</label>
+          <input type="text" [(ngModel)]="selectedEmployee.name" name="name" class="form-control">
+          <!-- username Input -->
+          <label>Username:</label>
+          <input type="text" [(ngModel)]="selectedEmployee.username" name="username" class="form-control">
+          <!-- password Input -->
+          <label>Password:</label>
+          <input type="password" [(ngModel)]="selectedEmployee.password" name="password" class="form-control">
+          <!-- age Input -->
+          <label>Age:</label>
+          <input type="number" [(ngModel)]="selectedEmployee.age" name="age" class="form-control">
+          <!-- gender dropdown -->
+          <label>Gender:</label>
+          <select [(ngModel)]="selectedEmployee.gender" name="gender" class="form-control">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <!-- email Input -->
+          <label>Email:</label>
+          <input type="email" [(ngModel)]="selectedEmployee.email" name="email" class="form-control">
+          <!-- mobile number Input -->
+          <label>Mobile Number:</label>
+          <input type="tel" [(ngModel)]="selectedEmployee.phone" name="phone" class="form-control">
+          <!-- position Input -->
+          <label>Position:</label>
+          <input type="text" [(ngModel)]="selectedEmployee.position" name="position" class="form-control">
+          <!-- package Input -->
+          <label>Package:</label>
+          <input type="number" [(ngModel)]="selectedEmployee.package" name="package" class="form-control">
+          <!-- DOB Input -->
+          <label>Date of Birth:</label>
+          <input type="date" [(ngModel)]="selectedEmployee.dob" name="dob" class="form-control">
+          <!-- BloodGroup dropdown -->
+          <label>Blood Group:</label>
+          <select [(ngModel)]="selectedEmployee.Blood_group" name="Blood_group" class="form-control">
+            <option value="A+ve">A+ve</option>
+            <option value="A-ve">A-ve</option>
+            <option value="B+ve">B+ve</option>
+            <option value="B-ve">B-ve</option>
+            <option value="AB+ve">AB+ve</option>
+            <option value="AB-ve">AB-ve</option>
+            <option value="O+ve">O+ve</option>
+            <option value="O-ve">O-ve</option>
+          </select>
+          <!-- status dropdown -->
+          <label>Status:</label>
+          <select [(ngModel)]="selectedEmployee.status" name="status" class="form-control">
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+          <!-- leaves Input -->
+          <label>Total Leaves:</label>
+          <input type="number" [(ngModel)]="selectedEmployee.leaves" name="leaves" class="form-control">
+
+          <div class="modal-footer">
+            <!-- button to close modal -->
+            <button type="button" class="btn btn-secondary" id="hide" data-bs-dismiss="modal">Close</button>
+            <!-- button to save updates -->
+            <button type="button" class="btn btn-success" id="saveEditedChanges" (click)="saveEditedEmployee()">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for  Edit employee details  ended  -->

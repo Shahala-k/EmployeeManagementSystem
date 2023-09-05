@@ -1,0 +1,111 @@
+     .admin-panel {
+       background: #ad1457;
+       height: 60px;
+     }
+
+     .logo {
+
+       &__img {
+         width: 45px;
+         height: 45px;
+         margin-left: 11px;
+         margin-top: 5px;
+         border-radius: 50%;
+       }
+
+       &__text {
+         margin-left: 10px;
+         font-weight: 800;
+         color: #f4b44c;
+         font-size: 19px;
+         position: relative;
+         top: 7px;
+       }
+
+     }
+
+     .sidenav {
+       background: #004f83;
+       width: 200px;
+       height: 70rem;
+       line-height: 67px;
+       color: #fff;
+       margin-top: 10px;
+       text-decoration: none;
+
+     }
+
+     .sidenav ul {
+       line-height: 80px;
+     }
+
+     .sidenav li {
+       list-style: none;
+       margin-left: -2rem;
+     }
+
+     .sidenav ul li a {
+       color: #fff;
+       display: flex;
+       align-items: center;
+       text-decoration: none;
+       border-radius: 12px;
+       transition: all 0.4s ease;
+     }
+
+     .sidenav ul li a:hover {
+       background: #fff;
+       color: #11101d;
+     }
+
+     .sidenav ul li a i {
+       height: 50px;
+       min-width: 50px;
+       line-height: 50px;
+       text-align: center;
+       font-size: 31px;
+
+     }
+
+     .logout {
+       top: 200px;
+       width: 160px;
+       position: relative;
+       left: -15px;
+     }
+
+     .logout li {
+       border-radius: 25px;
+       text-align: center;
+       margin-left: 0px;
+       background-color: #644876;
+     }
+
+     .logout li a:hover::after {
+       display: none;
+
+     }
+
+     // Responsive for mobile
+
+     @media (max-width: 625px) {
+       .admin-panel {
+         width: 92rem;
+       }
+
+       .sidenav {
+         height: 136rem;
+       }
+     }
+
+     // Responsive for tablet
+
+     @media (min-width: 769px) and (max-width: 1024px) {
+       .admin-panel {
+         width: 61rem;
+       }
+
+       .sidenav {
+         height: 136rem;
+       }
+     }

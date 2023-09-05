@@ -1,0 +1,41 @@
+<div class="emptable">
+    <!-- heading -->
+    <h4 class="text-danger"> Manage Leaves Here...!</h4><br>
+<!-- table for display all applied leaves of employees starts -->
+    <table class="table table-success table-striped table-info">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Leave Type</th>
+                <th>Start Date</th>
+                <th>End Date
+                <th>Reason</th>
+                <th>Leave Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- table items,all applied leaves -->
+            <tr *ngFor="let leave of leaves">
+                <td>{{leave.id}}</td>
+                <td>{{ leave.employeeId }}</td>
+                <td>{{leave.employeeName |titlecase}}</td>
+                <td>{{leave.leaveType |titlecase}}</td>
+                <td>{{leave.startDate |date}}</td>
+                <td>{{leave.endDate |date}}</td>
+                <td>{{leave.reason |titlecase}}</td>
+                <td>{{leave.status |titlecase}}</td>
+                <td>
+                    <div class="btns">
+                        <button class="btn btn-outline-success" (click)="approveLeave(leave)">Approve</button>
+                        <button class="btn btn-outline-danger" (click)="rejectLeave(leave)"> Reject</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- table for display all applied leaves of employees ended -->
+
+</div>

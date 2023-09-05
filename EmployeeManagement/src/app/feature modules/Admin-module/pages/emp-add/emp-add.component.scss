@@ -1,0 +1,21 @@
+.container-fluid {
+    width: 800px;
+}
+
+// Responsive for mobile
+
+@media(max-width:625px) {
+    .container-fluid {
+        margin-left: 12rem;
+        width: 620px;
+    }
+}
+
+// Responsive for tablet
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-fluid {
+        margin-left: 14rem;
+        width: 620px;
+    }
+}

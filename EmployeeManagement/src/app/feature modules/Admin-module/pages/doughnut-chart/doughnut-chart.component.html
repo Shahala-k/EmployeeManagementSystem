@@ -1,0 +1,34 @@
+<div class="donut-main">
+      <!-- doughnut chart  declaration-->
+  <div class="donut-chart">
+    <div id="chart"></div>
+  </div>
+  <div class="donutchart-info">
+    <div class="donut-table">
+      <div class="table-header">
+        <h3 class="text-danger">Employees Active Status</h3>
+      </div>
+      <!-- table for display employee active status for displaying chart -->
+      <div class="table-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Status</th>
+          </thead>
+          <tbody>
+            <!-- table items -->
+            <tr *ngFor="let emp of employees" class="table-row">
+              <td>{{emp.id}}</td>
+              <td>{{emp.name}}</td>
+              <td>{{emp.position}}</td>
+              <td>{{emp.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

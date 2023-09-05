@@ -1,0 +1,26 @@
+.table {
+    width: 60rem;
+}
+
+th {
+    background-color: #01acc2;
+}
+
+// Responsive for mobile
+
+@media(max-width:625px) {
+    .table {
+        position: relative;
+        left: -3rem;
+    }
+}
+
+// Responsive for tablet
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .table {
+        position: relative;
+        left: -3rem;
+        width: 31rem;
+    }
+}

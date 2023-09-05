@@ -1,0 +1,73 @@
+
+<div class="profile-card">
+    <!--  Reactiveform to edit logged employee details  starts-->
+    <form [formGroup]="editProfileForm" (ngSubmit)="onSubmit()">
+        <div class="personal-details">
+            <p class="text-warning mt-5">Edit your Personal Details</p>
+            <!-- name input -->
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" formControlName="name" class="form-control">
+            </div>
+            <!-- gender dropdown -->
+            <div class="form-group">
+                <label>Gender</label>
+                <select formControlName="gender" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+             <!-- age input -->
+             <div class="form-group">
+                <label>Age</label>
+                <input type="number" formControlName="age" class="form-control" />
+            </div>
+             <!-- DOB input -->
+             <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" formControlName="dob" class="form-control" />
+            </div>          
+            <!-- Blood Group dropdown -->
+            <div class="form-group">
+                <label>Blood Group</label>
+                <select formControlName="Blood_group" class="form-control">
+                    <option value="">Select Blood Group</option>
+                    <option value="A+ve">A+ve</option>
+                    <option value="A-ve">A-ve</option>
+                    <option value="B+ve">B+ve</option>
+                    <option value="B-ve">B-ve</option>
+                    <option value="AB+ve">AB+ve</option>
+                    <option value="AB-ve">AB-ve</option>
+                    <option value="O+ve">O+ve</option>
+                    <option value="O-ve">O-ve</option>
+                </select>
+            </div>
+            <!-- MobileNumber input -->
+            <div class="form-group">
+                <label>MobileNumber</label>
+                <input type="text" formControlName="phone" class="form-control">
+            </div>
+            <!-- email input -->
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" formControlName="email" class="form-control" />
+            </div>
+            <!-- username input -->
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" formControlName="username" class="form-control" />
+            </div>
+            <!-- password input -->
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" formControlName="password" class="form-control" />
+            </div><br>
+            <div class="btns">
+                <!--  edit save button -->
+                <button type="submit" class="btn btn-outline-success">Save Changes</button>
+            </div>
+        </div>
+    </form>
+        <!--  Reactiveform to edit logged employee details ended -->
+
+</div>

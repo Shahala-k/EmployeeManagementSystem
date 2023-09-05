@@ -1,0 +1,265 @@
+{
+  "admin": [
+    {
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "employees": [
+    {
+      "id": "Bnx-21",
+      "name": "Shahala Kp",
+      "Blood_group": "O+ve",
+      "dob": "2001-04-15",
+      "age": 22,
+      "gender": "female",
+      "status": "active",
+      "position": "Software Engineer",
+      "package": 50000,
+      "leaves": 4,
+      "email": "shahala@beinex.com",
+      "username": "shas",
+      "password": "shahala",
+      "phone": "8898743234",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.Zck_zhbBUys-FaSlLz739gHaJl&pid=Api&P=0&h=180",
+      "blood_Group": "O+ve"
+    },
+    {
+      "id": "Bnx-22",
+      "name": "Shaheen Rashaad ",
+      "Blood_group": "B+ve",
+      "dob": "2000-04-14",
+      "age": 23,
+      "gender": "male",
+      "status": "inactive",
+      "position": "Associate Software Engineer",
+      "package": 30000,
+      "leaves": 7,
+      "email": "shaheen@beinex.com",
+      "username": "shaheen",
+      "password": "shaheen",
+      "phone": "8965433916",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.YtDlFUwsas8immSsLrncqgHaH0&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "Bnx-23",
+      "name": "Ajay Vasudevan",
+      "Blood_group": "B+ve",
+      "dob": "1999-07-24",
+      "age": 24,
+      "gender": "male",
+      "status": "active",
+      "position": "Data Engineer",
+      "package": 52000,
+      "leaves": 5,
+      "email": "ajay@beinex.com",
+      "username": "ajay",
+      "password": "ajay123",
+      "phone": "7034581870",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.WpGPK4qHzTgwf2ysSG2vXAHaL2&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "Bnx-24",
+      "name": "Surya Aadhithya",
+      "Blood_group": "O-ve",
+      "dob": "2002-07-24",
+      "age": 21,
+      "gender": "female",
+      "status": "inactive",
+      "position": "Data Analyist",
+      "package": "60000",
+      "leaves": 1,
+      "email": "surya@beinex.com",
+      "username": "surya",
+      "password": "surya123",
+      "phone": "9876545700",
+      "image": "https://tse4.explicit.bing.net/th?id=OIP.wfiBk1Wk_WWXbmzH7t8MSQHaLH&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "Bnx-25",
+      "name": "Arjun kishor",
+      "Blood_group": "A+ve",
+      "dob": "1995-04-14",
+      "age": 28,
+      "gender": "male",
+      "status": "active",
+      "position": "Business Analyist",
+      "package": 63000,
+      "leaves": 6,
+      "email": "arjun@beinex.com",
+      "username": "arjun",
+      "password": "arjun123",
+      "phone": "8976543239",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.9OMOn_FD_npAFQMUbO44fAHaE7&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "Bnx-26",
+      "name": "Ajmal roshan ",
+      "Blood_group": "O-ve",
+      "image": "https://i.pinimg.com/736x/22/65/77/2265772c5b5fe7d867ecb4c152b7d55e.jpg",
+      "dob": "1998-07-19",
+      "age": 25,
+      "gender": "male",
+      "status": "active",
+      "position": "Project Manager",
+      "package": 70000,
+      "username": "ajmal",
+      "leaves": 3,
+      "email": "ajmal@gmail.com",
+      "password": "ajmal",
+      "phone": "8976567900"
+    }
+  ],
+  "leaves": [
+    {
+      "id": 1,
+      "employeeId": "Bnx-21",
+      "employeeName": "Shahala Kp",
+      "leaveType": "Casual Leave",
+      "startDate": "2023-08-15",
+      "endDate": "2023-08-20",
+      "reason": "Family vacation",
+      "status": "Rejected"
+    },
+    {
+      "id": 2,
+      "employeeId": "Bnx-22",
+      "employeeName": "Shaheen Rashaad",
+      "leaveType": "Sick Leave",
+      "startDate": "2023-06-05",
+      "endDate": "2023-06-06",
+      "reason": "Medical checkup",
+      "status": "Approved"
+    },
+    {
+      "id": 3,
+      "employeeId": "Bnx-23",
+      "employeeName": "Ajay Vasudevan",
+      "leaveType": "Annual Leave",
+      "startDate": "2023-08-25",
+      "endDate": "2023-08-28",
+      "reason": "Family vacation",
+      "status": "Approved"
+    },
+    {
+      "id": 4,
+      "employeeId": "Bnx-23",
+      "employeeName": "Ajay Vasudevan",
+      "leaveType": "Casual Leave",
+      "startDate": "2023-08-25",
+      "endDate": "2023-08-28",
+      "reason": "Personal need",
+      "status": "pending"
+    },
+    {
+      "id": 5,
+      "employeeId": "Bnx-24",
+      "employeeName": "Surya Aadhithya",
+      "leaveType": "Sick Leave",
+      "startDate": "2023-08-17",
+      "endDate": "2023-08-20",
+      "reason": "Medical checkup",
+      "status": "Approved"
+    },
+    {
+      "id": 6,
+      "employeeId": "Bnx-26",
+      "employeeName": "Ajmal roshan",
+      "leaveType": "Casual Leave",
+      "startDate": "2023-08-17",
+      "endDate": "2023-08-20",
+      "reason": "Outdoor",
+      "status": "Rejected"
+    },
+    {
+      "employeeId": "Bnx-21",
+      "employeeName": "shahala kp",
+      "leaveType": "Sick Leave",
+      "startDate": "2023-08-17",
+      "endDate": "2023-08-31",
+      "reason": "medical",
+      "status": "Approved",
+      "id": 7
+    },
+    {
+      "employeeId": "Bnx-26",
+      "employeeName": "Ajmal Roshan",
+      "leaveType": "Sick Leave",
+      "startDate": "2023-08-22",
+      "endDate": "2023-08-23",
+      "reason": "fever",
+      "status": "Approved",
+      "id": 8
+    },
+    {
+      "employeeId": "Bnx-26",
+      "employeeName": "Ajmal Roshan",
+      "leaveType": "Annual Leave",
+      "startDate": "2023-08-24",
+      "endDate": "2023-08-25",
+      "reason": "Onboarding",
+      "status": "pending",
+      "id": 9
+    },
+    {
+      "employeeId": "Bnx-25",
+      "employeeName": "Arjun kishor",
+      "leaveType": "Sick Leave",
+      "startDate": "2023-08-16",
+      "endDate": "2023-08-17",
+      "reason": "Fever",
+      "status": "Approved",
+      "id": 10
+    },
+    {
+      "employeeId": "Bnx-25",
+      "employeeName": "Arjun kishor",
+      "leaveType": "Casual Leave",
+      "startDate": "2023-08-21",
+      "endDate": "2023-08-22",
+      "reason": "Family Function",
+      "status": "pending",
+      "id": 15
+    },
+    {
+      "employeeId": "Bnx-22",
+      "employeeName": "Shaheen Rashaad",
+      "leaveType": "Sick Leave",
+      "startDate": "2023-07-18",
+      "endDate": "2023-07-18",
+      "reason": "For Medical Procedure",
+      "status": "Approved",
+      "id": 16
+    },
+    {
+      "employeeId": "Bnx-21",
+      "employeeName": "shahala kp",
+      "leaveType": "Annual Leave",
+      "startDate": "2023-08-18",
+      "endDate": "2023-08-23",
+      "reason": "Outdoor",
+      "status": "Pending",
+      "id": 17
+    },
+    {
+      "employeeId": "Bnx-22",
+      "employeeName": "Shaheen Rashaad ",
+      "leaveType": "Sick Leave",
+      "startDate": "2023-08-21",
+      "endDate": "2023-08-21",
+      "reason": "fever",
+      "status": "Pending",
+      "id": 18
+    },
+    {
+      "employeeId": "Bnx-21",
+      "employeeName": "Shahala Kp",
+      "leaveType": "Sick Leave",
+      "startDate": "2023-08-30",
+      "endDate": "2023-08-31",
+      "reason": "fever",
+      "status": "Approved",
+      "id": 19
+    }
+  ]
+}
